@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Water is LIfe</title>
+     <link rel="stylesheet" href="style.css">
+</head>	 
+<body>
+     <div class="full-page">
+          <div class="navbar">
+		    <div>
+			    <a href='website.html'>Water is Life</a>
+			</div>
+            <nav>
+               <ul id='MenuItems'>
+                 <li><a href="services.html">Home</a></li>
+				 <li><a href='#'>Parameters</a></li>
+				 <li><a href='#'>Analytics</a></li>
+				 <li><a href='#'>Contact</a></li>
+				 <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'"style="width:auto;">Login</button></li>
+			   </ul>
+            </nav>			   
+	      </div>
+		  <div id='login-form' class='login-page'>
+		     <div class="form-box">
+			    <div class='button-box'>
+				   <div id='btn'></div>
+				   <button type='button' onclick='login()'class='toggle-btn'>Login</button>
+				   <button type='button' onclick='register()'class='toggle-btn'>Register</button>
+				</div>
+                <form id='login' class='input-group-login'>
+                    <input type='email' id='email' class='input-field' placeholder='Enter Email' required>
+					<input type='password' id='passwordd' class='input-field' placeholder='Enter Password' required>
+					<div id='button_container'>
+				    <button onclick='login_btn()'>Login</button>
+					</div>
+                </form>	
+                <form id='register' class='input-group-register'>
+                    <input type='text' id='full_name' class='input-field' placeholder='Enter Full Name' required>
+					<input type='email' id='email' class='input-field' placeholder='Enter Email' required>
+				    <input type='password' id='passwordd' class='input-field' placeholder='Enter Password' required>	
+					<div id='button_container'>
+				    <button onclick='register_btn()'>Register</button>
+					</div>
+                </form>	
+				
+				
+			</div>
+         </div>			
+	 </div>
+	 <script>
+	    var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+		    x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+		    x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';  
+		}
+     </script>
+</body>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"> </script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"> </script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js"> </script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage.js"> </script>
+  <script src="js/index.js"></script>
+
+</html>
